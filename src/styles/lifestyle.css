@@ -1790,3 +1790,76 @@ legend > span {
 .free-request > .primary-button {
   width: 100%;
 }
+
+/* Trips: constrain intrinsic sizes instead of hiding horizontal overflow. */
+.tab-trips .panel-scroll {
+  min-width: 0;
+  min-height: 0;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.trips-editor {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.trips-editor > *,
+.trips-editor .field-label,
+.trips-editor .feature-banner > div,
+.trips-editor .origin-picker,
+.trips-editor .chosen-origin,
+.trips-editor .stop-top > div {
+  min-width: 0;
+  max-width: 100%;
+}
+.trips-editor .field-label > input,
+.trips-editor .field-label > select,
+.trips-editor .field-label > textarea {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+/* Keep the native date/time picker; remove its intrinsic visual sizing on iOS. */
+.trips-editor input[type='date'],
+.trips-editor input[type='time'] {
+  -webkit-appearance: none;
+  appearance: none;
+  min-inline-size: 0;
+}
+.trips-editor input::-webkit-date-and-time-value {
+  min-width: 0;
+  text-align: left;
+}
+.trips-editor input::-webkit-datetime-edit {
+  min-width: 0;
+  padding: 0;
+}
+.trips-editor .stop-top img {
+  flex-shrink: 0;
+}
+.trips-editor .stop-top > .icon-button {
+  margin: 0;
+  flex: 0 0 44px;
+  width: 44px;
+  min-height: 44px;
+}
+.trips-editor .stop-controls {
+  flex-wrap: wrap;
+}
+.trips-editor .stop-controls input {
+  width: 78px;
+  max-width: 100%;
+}
+@media (max-width: 360px) {
+  .trips-editor .stop-top img {
+    width: 54px;
+    height: 65px;
+  }
+}
+@media (min-width: 800px) {
+  .tab-trips .panel-scroll {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
