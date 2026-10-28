@@ -1,0 +1,319 @@
+.auth-layout {
+  min-height: 100dvh;
+  background: var(--canvas);
+  display: grid;
+  place-items: center;
+  padding: calc(28px + env(safe-area-inset-top)) 20px calc(28px + env(safe-area-inset-bottom));
+  overflow: auto;
+  color: var(--ink);
+}
+.auth-panel {
+  max-width: 440px;
+  width: 100%;
+  padding: 26px 0;
+}
+.auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: var(--coral-ink);
+  margin-bottom: 40px;
+}
+.auth-brand svg {
+  width: 30px;
+  height: 30px;
+}
+.auth-panel h1 {
+  font-size: 34px;
+  line-height: 1.1;
+  letter-spacing: -0.055em;
+  margin: 12px 0 18px;
+}
+.auth-panel > p {
+  line-height: 1.7;
+  color: var(--muted);
+  font-size: 14px;
+}
+.auth-panel form {
+  display: grid;
+  gap: 20px;
+  margin: 28px 0;
+}
+.auth-panel .field-label {
+  gap: 9px;
+}
+.auth-panel .field-label input {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.auth-panel .primary-button {
+  width: 100%;
+}
+.auth-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 14px;
+}
+.configuration-note {
+  background: var(--sun-soft);
+  border: 1px solid var(--sun);
+  border-radius: 20px;
+  padding: 18px;
+  color: var(--sun-ink) !important;
+  font-size: 13px !important;
+}
+.password-rules {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 14px 17px;
+  list-style: none;
+  border-radius: 16px;
+  background: var(--surface);
+  font-size: 12px;
+  color: var(--muted);
+}
+.password-rules .satisfied {
+  color: var(--mint-ink);
+}
+.username-input {
+  display: flex;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding-left: 15px;
+  gap: 6px;
+}
+.username-input input {
+  background: transparent;
+  border: 0;
+  padding: 15px;
+  color: var(--ink);
+  min-width: 0;
+  outline: none;
+}
+.username-input:focus-within {
+  outline: 2px solid var(--focus);
+}
+.account-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 20px;
+  margin: 20px 0;
+}
+.account-card h3 {
+  font-size: 17px;
+  margin: 0 0 15px;
+}
+.account-card p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+.account-card summary {
+  cursor: pointer;
+  min-height: 44px;
+  font-weight: 650;
+}
+.account-content {
+  padding: 10px 22px 40px;
+  display: grid;
+  gap: 18px;
+}
+.account-content .account-card {
+  margin: 0;
+}
+.account-tabs {
+  display: flex;
+  gap: 7px;
+  padding: 5px;
+  background: var(--canvas);
+  border-radius: 18px;
+}
+.account-tabs button {
+  flex: 1;
+  min-height: 48px;
+  border-radius: 14px;
+  font-size: 11px;
+}
+.account-tabs [aria-pressed='true'] {
+  background: var(--lavender-soft);
+  color: var(--lavender-ink);
+  box-shadow: var(--shadow-soft);
+}
+.account-actions {
+  display: flex;
+  gap: 10px;
+}
+.person-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.person-row > div {
+  flex: 1;
+  min-width: 0;
+}
+.person-row small,
+.map-option small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 5px;
+}
+.person-row img,
+.avatar-initial {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: grid;
+  place-items: center;
+  background: var(--mint-soft);
+  color: var(--mint-ink);
+}
+.person-row .secondary-button {
+  padding: 10px;
+  font-size: 11px;
+}
+.map-option {
+  padding: 18px;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  min-height: 72px;
+}
+.map-option[aria-pressed='true'] {
+  border: 2px solid var(--coral);
+  background: var(--coral-soft);
+}
+.success-note {
+  padding: 15px;
+  background: var(--mint-soft);
+  color: var(--mint-ink);
+  border-radius: 16px;
+  font-size: 13px;
+}
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 18px 0;
+}
+.consent input {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  accent-color: var(--coral-ink);
+}
+.map-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px 6px 15px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 12px;
+  pointer-events: auto;
+}
+.map-selector > span {
+  display: none;
+}
+.map-selector select {
+  min-width: 0;
+  flex: 1;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--ink);
+  border: 0;
+  background: none;
+  min-height: 40px;
+}
+.map-selector button {
+  min-width: 40px;
+  min-height: 40px;
+  color: var(--coral-ink);
+  border-radius: 12px;
+}
+.offline-banner,
+.account-load-error {
+  position: fixed;
+  z-index: 1000;
+  top: env(safe-area-inset-top);
+  left: 12px;
+  right: 12px;
+  margin: 8px auto;
+  max-width: 700px;
+  background: var(--sun-soft);
+  color: var(--sun-ink);
+  border: 1px solid var(--sun);
+  border-radius: 16px;
+  padding: 12px 16px;
+  font-size: 12px;
+  box-shadow: var(--shadow-float);
+}
+.account-load-error button {
+  padding: 10px;
+  text-decoration: underline;
+}
+.offline-banner ~ .auth-layout {
+  padding-top: 100px;
+}
+.offline-banner ~ .atlas-app .map-hud {
+  top: calc(100px + env(safe-area-inset-top));
+}
+.review-author {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.review-author img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+@media (min-width: 900px) {
+  .auth-panel {
+    padding: 40px;
+    background: var(--surface);
+    border-radius: 32px;
+    box-shadow: var(--shadow-card);
+    max-width: 500px;
+  }
+  .auth-layout {
+    height: 100dvh;
+  }
+  .map-selector {
+    margin-bottom: 16px;
+  }
+  .offline-banner ~ .atlas-app .map-hud {
+    top: 90px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .auth-panel,
+  .account-content {
+    animation: none;
+  }
+}
+.auth-layout {
+  height: 100dvh;
+  align-items: start;
+}
+.auth-panel {
+  margin: auto;
+}

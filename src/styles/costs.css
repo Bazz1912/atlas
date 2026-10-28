@@ -1,0 +1,171 @@
+.cost-grid,
+.cost-input-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.cost-grid .field-label,
+.cost-input-row .field-label {
+  min-width: 0;
+}
+.cost-grid input,
+.cost-input-row input,
+.cost-input-row select {
+  width: 100%;
+  min-width: 0;
+}
+.cost-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin: 12px 0;
+}
+.cost-toggle input {
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+.trip-cost-card {
+  margin: 16px 0;
+  padding: 16px;
+  border-radius: 22px;
+  background: var(--surface, #fff);
+  border: 1px solid rgba(140, 120, 180, 0.16);
+}
+.trip-cost-card h2 {
+  font-size: 17px;
+  margin: 0 0 12px;
+}
+.cost-lines {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+}
+.cost-lines div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.cost-lines dd {
+  margin: 0;
+  font-weight: 650;
+  text-align: right;
+}
+.cost-total {
+  margin: 12px 0 4px;
+  font-size: 15px;
+}
+.trip-cost-card summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding: 12px 0;
+  font-size: 13px;
+}
+.trip-cost-card .text-button {
+  min-height: 40px;
+  font-size: 13px;
+}
+.experience-cost {
+  color: var(--muted, #756888);
+  font-size: 13px;
+}
+.price-filter {
+  margin: 8px 0 16px;
+}
+.price-filter .field-label {
+  margin-bottom: 10px;
+}
+@media (max-width: 360px) {
+  .cost-grid,
+  .cost-input-row {
+    grid-template-columns: 1fr;
+  }
+}
+.car-selector {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  padding: 4px;
+  margin: 0 0 14px;
+  border-radius: 17px;
+  background: #f6f2fa;
+}
+.car-option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-width: 0;
+  min-height: 62px;
+  padding: 4px;
+  border: 1px solid transparent;
+  border-radius: 13px;
+  cursor: pointer;
+  color: #80758b;
+  transition:
+    background 0.16s ease,
+    color 0.16s ease,
+    border-color 0.16s ease;
+  --car-wheel: #f6f2fa;
+}
+.car-option input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+}
+.car-option svg {
+  width: 48px;
+  height: 25px;
+  flex: none;
+}
+.car-option span {
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 650;
+}
+.car-option.selected {
+  background: #e9e0fb;
+  border-color: #c7b5eb;
+  color: #5e427c;
+  --car-wheel: #e9e0fb;
+}
+.car-option:focus-within {
+  outline: 2px solid #9b7cc2;
+  outline-offset: 1px;
+}
+.toll-info-icon {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: 5px;
+  color: #8864a6;
+}
+.cost-toll-note,
+.cost-indicative {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #7e7289;
+  margin: 6px 0;
+}
+.cost-indicative {
+  margin-top: 4px;
+  color: #705582;
+}
+@media (prefers-reduced-motion: reduce) {
+  .car-option {
+    transition: none;
+  }
+}
+.toll-sr-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

@@ -1,0 +1,40 @@
+node_modules/
+dist/
+.tools/
+.npm-cache/
+.DS_Store
+*.local
+.env
+.env.*
+!/.env.example
+
+# Supabase CLI checkout metadata (no credentials in Git)
+.supabase/
+supabase/.temp/
+
+# Credentials and local tooling; never part of source or the Pages artifact.
+.agents/
+.codex/
+.aws/
+.ssh/
+.npmrc
+.yarnrc.yml
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.log
+*.tsbuildinfo
+coverage/
+playwright-report/
+test-results/
+backups/
+atlas-backup*.json
+.*-ui-check/
+.ui-layout-check/
+# Local QA screenshots can contain personal maps, names and photos.
+/docs/*.png
+/docs/*.jpg
+/docs/*.jpeg
+/docs/*.webp

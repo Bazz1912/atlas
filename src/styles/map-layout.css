@@ -1,0 +1,196 @@
+/* Map layout refinement only. App data, services and account actions are unchanged. */
+.map-hud {
+  top: calc(var(--top) + 8px);
+  left: max(12px, env(safe-area-inset-left, 0px));
+  right: max(12px, env(safe-area-inset-right, 0px));
+  max-height: none;
+  overflow: visible;
+  z-index: 8;
+}
+.map-hud .map-topline {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-height: 44px;
+  margin: 0 0 8px;
+}
+.map-topline .wordmark {
+  flex: 0 0 auto;
+  gap: 5px;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+.map-topline .map-selector {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+}
+.map-selector-field {
+  position: relative;
+  min-width: 0;
+  flex: 1;
+}
+.map-selector-field select {
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  min-width: 0;
+  height: 44px;
+  padding: 0 27px 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--glass-cream);
+  font-size: 16px; /* Keep native selection from zooming the page on iPhone. */
+  line-height: normal;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+.map-selector-field > svg {
+  position: absolute;
+  top: 15px;
+  right: 9px;
+  pointer-events: none;
+  color: var(--muted);
+}
+.map-selector .profile-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--lavender);
+  border-radius: 50%;
+  background: var(--lavender-soft);
+  color: var(--lavender-ink);
+  font-size: 16px;
+  font-weight: 750;
+  box-shadow: var(--shadow-soft);
+}
+.map-selector .profile-avatar:hover {
+  background: var(--lavender);
+}
+.map-hud > .place-search {
+  z-index: 3;
+}
+.map-hud .search-field {
+  min-height: 50px;
+  padding: 0 13px;
+  border-radius: 17px;
+  gap: 9px;
+}
+.map-hud .search-field input {
+  min-width: 0;
+  min-height: 46px;
+  font-size: 16px; /* Prevent focus zoom on iPhone. */
+}
+.map-hud .search-field > svg {
+  flex-shrink: 0;
+}
+.map-hud .search-hint {
+  display: none;
+}
+.map-hud .filter-row {
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
+}
+.map-hud .filter-button {
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+}
+.map-hud .segmented {
+  flex: 1;
+}
+.map-hud .segmented button {
+  min-height: 40px;
+}
+.map-hud .search-results {
+  top: calc(100% + 7px);
+  z-index: 20;
+  max-height: max(
+    0px,
+    min(var(--search-panel-height, 55dvh), calc(100dvh - var(--top) - var(--nav-height) - 136px))
+  );
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  border-radius: 18px;
+  box-shadow: var(--shadow-float);
+}
+.map-hud .search-results > button {
+  min-height: 48px;
+}
+.map-hud .search-results button > svg {
+  flex-shrink: 0;
+}
+.map-hud .search-results button > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+/* The removed summary has no reserved grid row or placeholder. */
+@media (min-width: 800px) {
+  .map-hud {
+    top: calc(var(--top) + 16px);
+    left: max(24px, env(safe-area-inset-left, 0px));
+    right: auto;
+    width: 350px;
+  }
+  .desktop-map-list {
+    top: calc(var(--top) + 194px);
+    max-height: calc(100% - var(--top) - 274px);
+  }
+  .tab-saved .map-hud .map-topline,
+  .tab-ai .map-hud .map-topline,
+  .tab-trips .map-hud .map-topline {
+    display: flex;
+  }
+}
+@media (max-width: 360px) {
+  .map-topline .wordmark {
+    font-size: 12px;
+    gap: 4px;
+  }
+  .map-topline .wordmark svg {
+    width: 14px;
+  }
+  .map-selector-field select {
+    padding-left: 8px;
+  }
+}
+@media (max-width: 799px) {
+  .map-legend {
+    left: max(12px, env(safe-area-inset-left, 0px));
+    bottom: calc(var(--nav-height) + 38px);
+  }
+}
+@media (min-width: 800px) {
+  .tab-map:has(.active-filter-chip) .desktop-map-list {
+    top: calc(var(--top) + 236px);
+    max-height: calc(100% - var(--top) - 316px);
+  }
+}
+/* One rounded focus ring on the search field; the input does not draw a second rectangle. */
+.map-hud .search-field input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}

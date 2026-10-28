@@ -1,0 +1,11 @@
+project_id = "atlas"
+
+[functions.atlas-ai-explorer]
+enabled = true
+verify_jwt = true
+entrypoint = "./functions/atlas-ai-explorer/index.ts"
+
+[functions.atlas-here-route]
+enabled = true
+verify_jwt = true
+entrypoint = "./functions/atlas-here-route/index.ts"

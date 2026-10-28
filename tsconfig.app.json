@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext", "moduleResolution": "bundler", "jsx": "react-jsx",
+    "skipLibCheck": true, "strict": true, "resolveJsonModule": true, "noEmit": true,
+    "allowImportingTsExtensions": true, "verbatimModuleSyntax": true,
+    "noUnusedLocals": true, "noUnusedParameters": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo"
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,46 @@
+/* Generato da src/design/tokens.json: npm run theme */
+:root {
+  --canvas: #fff9f3;
+  --surface: #ffffff;
+  --ink: #302d39;
+  --muted: #77717e;
+  --border: #eee7e5;
+  --coral: #ff8d87;
+  --coral-hover: #ffaba5;
+  --coral-soft: #fff0ec;
+  --coral-ink: #853a36;
+  --lavender: #b9a5f8;
+  --lavender-soft: #f0eafc;
+  --lavender-ink: #625087;
+  --mint: #9cddcf;
+  --mint-soft: #e9f7f2;
+  --mint-ink: #276756;
+  --sun: #ffd47e;
+  --sun-soft: #fff4d9;
+  --sun-ink: #795619;
+  --danger: #ad364c;
+  --danger-soft: #fff0f2;
+  --focus: #795eb5;
+  --glass: #fffffff2;
+  --glass-cream: #fff9f3f5;
+  --scrim: #302d3940;
+  --shadow-color: #59483814;
+  --shadow-soft: 0 6px 24px #5948380f;
+  --shadow-card: 0 8px 30px #59483812;
+  --shadow-float: 0 10px 32px #5948381a;
+  --shadow-sheet: 0 -12px 50px #5948381f;
+  --radius-control: 16px;
+  --radius-card: 24px;
+  --radius-sheet: 32px;
+  --priority-low: #34d399;
+  --priority-medium: #fbbf24;
+  --priority-high: #fb7185;
+  --map-land: #f6f2ea;
+  --map-water: #cfe7e6;
+  --map-park: #d8e9cb;
+  --map-building: #e6ddd5;
+  --map-boundary: #b8b0bc;
+  --map-label: #5f5969;
+  --leaf: #98d58c;
+  --rose: #efa6c8;
+}
